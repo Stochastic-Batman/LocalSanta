@@ -1,6 +1,6 @@
 # LocalSanta
 
-Secret Santa, but only with people you actually know.
+Secret Santa, but only give gifts to people you actually know.
 
 # Inputs
 
