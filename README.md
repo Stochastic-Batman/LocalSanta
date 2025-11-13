@@ -8,8 +8,10 @@ Secret Santa, but only give gifts to people you actually know.
 
 1. `.csv`. Example:
 
+```
 | lado | aneli | tsula |
 | nita | ana   | luka  |
+```
 
 2. `.xlsx`. An Excel file where the first cell of each row is a person and the remaining cells in that row are people they might gift.
 
