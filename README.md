@@ -6,15 +6,15 @@ Secret Santa, but only give gifts to people you actually know.
 
 3 types of inputs are accepted with formats (values can have starting/trailing spaces; they will be stripped):
 
-1. `.csv`. Example:
+1. `.csv` ↣ Example - 2 rows of a file:
 
 | lado,aneli, tsula |
 |------------------------|
 | nita, ana,luka |
 
-2. `.xlsx`. An Excel file where the first cell of each row is a person and the remaining cells in that row are people they might gift.
+2. `.xlsx` ↣ An Excel file where the first cell of each row is a person and the remaining cells in that row are people they might gift.
 
-3. `.json`. A JSON file where each key is a person and the value is a list of people they might want to give a gift.
+3. `.json` ↣ A JSON file where each key is a person and the value is a list of people they might want to give a gift.
 
 # Setup
 
