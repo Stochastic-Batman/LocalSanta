@@ -48,4 +48,4 @@ def read(filepath: str) -> dict[str, list[str]]:
 
 
 if __name__ == "__main__":
-    print("You should not be running this file. Instead, run: python main.py INPUT_FILE_NAME.[(csv)|(xlsx)|(json)]")
+    logging.warning("You should not be running this file. Instead, run: python main.py INPUT_FILE_NAME.[(csv)|(xlsx)|(json)]")
