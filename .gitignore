@@ -8,5 +8,6 @@
 .idea/misc.xml
 
 # Samples and generated files
+sample.csv
 sample.json
 sample.xlsx

@@ -1,6 +1,7 @@
 import csv
 import json
 import logging
+
 from openpyxl import load_workbook
 
 
@@ -43,9 +44,8 @@ def read(filepath: str) -> dict[str, list[str]]:
         return read_json(filepath)
     if path.endswith(".csv"):
         return read_csv(filepath)
-    logging.critical("Supported file extensions are: .csv, .xlsx and .json. Please input one of those files.")
     return {}
 
 
 if __name__ == "__main__":
-    logging.warning("You should not be running this file. Instead, run: python main.py INPUT_FILE_NAME.[(csv)|(xlsx)|(json)]")
+    logging.warning("You should not be running this file. Instead, run: python main.py INPUT_FILE_NAME.(csv|xlsx|json)")
