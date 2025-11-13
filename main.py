@@ -20,7 +20,7 @@ def ensure_key_domain_equals_value_domain(d: dict[str, list[str]]) -> bool:
     if only_recipients:
         logging.error(f"People who are only recipients: {only_recipients}")
     if not (only_gifters or only_recipients):
-        logging.info("There is no person who is either only gifter or only recipient.")
+        logging.info("Such a great group! There is no person who is either only gifter or only recipient!")
 
     return not (only_gifters or only_recipients)
 
@@ -55,9 +55,7 @@ def find_assignment(d: dict[str, list[str]], max_seconds: int = 100) -> dict[str
         result = attempt_assignment(d)
         if result is not None:
             elapsed = time.time() - start_time
-            success_probability = 1.0 / attempts
-            logging.info(f"Success! Assignment found after {attempts} attempt(s) in {elapsed:.2f} seconds")
-            logging.info(f"Estimated success probability per attempt: {success_probability:.2f} ({success_probability * 100:.2f}%)")
+            logging.info(f"Assignment found!")
             return result
 
     elapsed = time.time() - start_time

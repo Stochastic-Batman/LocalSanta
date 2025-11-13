@@ -29,7 +29,7 @@ def display_remaining_people(people: list[str]) -> None:
     logging.info("=" * 50)
 
 
-def interactive_reveal(assignment: dict[str, str]) -> None:
+def interactive_reveal(assignment: dict[str, str], screen_time: int = 5) -> None:
     remaining = list(assignment.keys())
 
     while remaining:
@@ -40,12 +40,12 @@ def interactive_reveal(assignment: dict[str, str]) -> None:
 
         if name not in assignment:
             logging.info(f"Name '{name}' not found in the assignment list. Please try again.")
-            time.sleep(2)
+            time.sleep(screen_time)
             continue
 
         if name not in remaining:
             logging.info(f"{name}, you have already seen your assignment!")
-            time.sleep(2)
+            time.sleep(screen_time)
             continue
 
         clear_screen()
@@ -54,9 +54,9 @@ def interactive_reveal(assignment: dict[str, str]) -> None:
         logging.info("=" * 50)
         logging.info(f"{name}, you shall give a gift to: {assignment[name]}\n")
         logging.info("=" * 50)
-        logging.info("This message will disappear in 10 seconds...")
+        logging.info(f"This message will disappear in {screen_time} seconds...")
 
-        time.sleep(10)
+        time.sleep(screen_time)
         remaining.remove(name)
 
     clear_screen()
